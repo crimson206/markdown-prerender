@@ -1,17 +1,32 @@
 import React from 'react';
-import { MyPackage } from './MyPackage';
-import { renderToString } from 'react-dom/server';
+import { useDynamicComponents } from './prerender/useDynamicComponents';
+import { processDynamicComponents } from './prerender/DynamicRenderer';
+import ExampleDynamicComponent, {HighlightDisplayComponent} from './prerender/examples/DynamicComponents';
+import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
+import markdownRaw from './prerender/examples/markdown.md?raw'
 
-function App() {
+export const App  = () => {
+
+  const dynamicRenderResult = processDynamicComponents(
+    markdownRaw,
+    [
+        {id:'dynamicComponent', Component: ExampleDynamicComponent},
+        {id:'highlighted', Component: HighlightDisplayComponent}
+    ]
+    )
+
+  useDynamicComponents(
+    dynamicRenderResult.componentPairs
+  ) 
+
   return (
-    <div className="App">
-      <MyPackage />
+    <div className="MyPackage">
+      <ReactMarkdown
+        rehypePlugins={[rehypeRaw]}
+      >{dynamicRenderResult.transformedContent}</ReactMarkdown>
     </div>
   );
-}
-
-export function render() {
-  return renderToString(<App />);
 }
 
 export default App;
