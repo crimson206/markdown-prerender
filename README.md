@@ -130,14 +130,6 @@ MIT
 
 ## For Development Reference
 
-We provide a flattened module structure for easier understanding and AI assistance during development. You can download it here: [flatten_module.zip](https://github.com/crimson206/talkative-prerender/releases/download/v0.1.0/flatten_module.zip)
+We provide a flattened module structure for easier understanding and AI assistance during development. You can download it here: [flatten_module.zip](https://github.com/crimson206/markdown-prerender/blob/main/flatten_module.zip)
 
-### Using the Flattened Module with AI
 
-1. Download and extract `flatten_module.zip`
-2. When seeking AI assistance:
-   - Share the relevant files from the flattened module
-   - Ask specific questions about implementation details
-   - Use it as a reference for understanding the library's structure
-
-[Rest of Features and API documentation remains the same...]
