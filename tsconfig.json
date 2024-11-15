@@ -2,6 +2,7 @@
     "compilerOptions": {
       "target": "ESNext",
       "module": "ESNext",
+      "moduleResolution": "node",
       "jsx": "react",
       "declaration": true,
       "outDir": "dist",
@@ -9,5 +10,11 @@
       "strict": true,
       "lib": ["DOM", "ESNext"]
     },
-    "include": ["src"]
+    "include": ["src"],
+    "exclude": [
+      "src/prerender/examples",  // 제외할 폴더
+      "src/MyPackage.tsx",    // 제외할 파일
+      "src/main.jsx",
+      "src/App.jsx"
+    ]
   }

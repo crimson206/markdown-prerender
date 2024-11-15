@@ -9,6 +9,9 @@ export default defineConfig({
       insertTypesEntry: true,  // 타입을 별도의 엔트리로 추가
     }),
   ],
+  ssr: {
+    noExternal: ['react', 'react-dom'] // SSR에서 외부 의존성으로 처리하지 않음
+  },
   build: {
     lib: {
       entry: 'src/index.ts', // 번들링할 엔트리 파일

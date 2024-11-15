@@ -1,1 +1,2 @@
-export { MyPackage } from './MyPackage'
+export { useDynamicComponents } from './prerender/useDynamicComponents';
+export { processDynamicComponents } from './prerender/DynamicRenderer';

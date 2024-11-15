@@ -1,22 +1,17 @@
 import React from 'react';
-// import { Default } from './stories/WithControl.stories';
-import { BootstrapThemePlugin } from './BootstrapThemePlugin'
-
-
-
-
+import { MyPackage } from './MyPackage';
+import { renderToString } from 'react-dom/server';
 
 function App() {
-
-  const themePlugin = new BootstrapThemePlugin('lux');
-  const { ThemeSelector } = themePlugin.useThemeComponent();
-
   return (
     <div className="App">
-      <p> Any Message</p>
-      <ThemeSelector/>
+      <MyPackage />
     </div>
   );
+}
+
+export function render() {
+  return renderToString(<App />);
 }
 
 export default App;
