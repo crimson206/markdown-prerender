@@ -127,9 +127,3 @@ interface ComponentPair {
 ## License
 
 MIT
-
-## For Development Reference
-
-We provide a flattened module structure for easier understanding and AI assistance during development. You can download it here: [flatten_module.zip](https://github.com/crimson206/markdown-prerender/blob/main/flatten_module.zip)
-
-
