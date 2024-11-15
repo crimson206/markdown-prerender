@@ -127,3 +127,8 @@ interface ComponentPair {
 ## License
 
 MIT
+
+
+## Download Flatten Module
+
+[flatten-module](https://github.com/crimson206/markdown-prerender/raw/refs/heads/main/flatten_markdown_prerender.zip)
